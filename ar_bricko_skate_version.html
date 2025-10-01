@@ -15,19 +15,22 @@
 
     <body style='margin : 0px; overflow: hidden;'>
 
-        <a-scene embedded arjs>
+        <a-scene high-res-renderer embedded arjs>
             <!-- Marker Hiro -->
              <a-assets rotation="10 25 0">
-                    <a-asset-item id="livello0" src="3d/livello0.glb"></a-asset-item>
-                    <a-asset-item id="livello1" src="3d/livello1.glb"></a-asset-item>
+                    <a-asset-item id="livello0" src="3d/livelloVerde.glb"></a-asset-item>
+                    <a-asset-item id="livello1" src="3d/corniceNera.glb"></a-asset-item>
+
                     <a-asset-item id="bricco" src="3d/skater.glb"></a-asset-item>
-                    <a-asset-item id="stella" src="3d/lego1x1.glb"></a-asset-item>
-                    <a-asset-item id="1x12" src="3d/lego1x1_2.glb"></a-asset-item>
+                    <a-asset-item id="skate" src="3d/skate.glb"></a-asset-item>
+
+                    <a-asset-item id="stella" src="3d/lego1x1Verde.glb"></a-asset-item>
+                    <a-asset-item id="1x12" src="3d/1x1giallo.glb"></a-asset-item>
                     <a-asset-item id="logoStella" src="3d/logo.glb"></a-asset-item>
 
             </a-assets>
 
-            <a-marker type="pattern" url="3d/skaterNera3.patt">
+            <a-marker type="pattern" url="3d/skaterVerde.patt">
                 <!-- Aggiungi un oggetto 3D da visualizzare -->
                 <!--<a-image src="immagini/altalena.jpg" position="0 0 0" rotation="-90 0 0" width="1.8" height="2.8"></a-image>-->
                     <!-- define your gltf asset -->
@@ -37,22 +40,26 @@
                     <a-entity light="type: directional; color: #fff; intensity: 1.5" position="1 2 1"></a-entity>
                     <a-entity light="type: point; intensity: 1.3; distance: 15; decay: 2" position="1 4 1"></a-entity>
     
-                    <a-entity gltf-model="#livello0" scale=".5 .5 .5"  position="0 0 0" rotation="0 90 -90"></a-entity>
-                    <a-entity gltf-model="#livello1" scale=".5 .5 .5"  position="0 0 0.05" rotation="0 90 -90"></a-entity>  
+                    <a-entity gltf-model="#livello0" scale=".2 .2 .2"  position="0 0 0" rotation="0 90 -90"></a-entity>
+                    <a-entity gltf-model="#livello1" scale=".8 .8 .8" animation-mixer position="0 0.1 0" rotation="15 100 90"></a-entity>
 
-                    <a-entity gltf-model="#bricco" scale="1.5 1.5 1.5"   position="0 0.7 1.5" rotation="90 90 270"></a-entity> 
-                    
-                    <a-entity gltf-model="#stella" scale="1.4 1.4 1.4" animation-mixer position="1 1 1.2" rotation="0 90 -90"></a-entity> 
-                    <a-entity gltf-model="#1x12" scale="1 1 1" animation-mixer position="-1.5 0.2 -1.2" rotation="0 90 -90"></a-entity> 
+                    <a-entity gltf-model="#bricco" scale="1.6 1.6 1.6"   position="0 0.7 1.5" rotation="90 90 270"></a-entity> 
+                    <a-entity gltf-model="#skate" scale=".6 .6 .6" animation-mixer  position="0 1.3 1.65" rotation="10 116 270"></a-entity> 
 
-                    <a-entity gltf-model="#logoStella" scale="1 1 1" animation-mixer position="-1 0.5 -0.9" rotation="0 -90 90"></a-entity> 
+                    <a-entity gltf-model="#stella" scale="1.6 1.6 1.6" animation-mixer position="1 1 1" rotation="0 90 -90"></a-entity> 
+                    <a-entity gltf-model="#1x12" scale="1.3 1.3 1.3" animation-mixer position="-1 0.2 .2" rotation="0 90 -90"></a-entity> 
+
+                    <a-entity gltf-model="#logoStella" scale="1.3 1.3 1.3" animation-mixer position="-0.9 0.6 -1.5" rotation="0 -90 90"></a-entity> 
 
             </a-marker>
             <!-- La camera AR -->
             <a-entity camera></a-entity>
         </a-scene>
 
+          
     </body>
+
+  
 
    
 </html>
